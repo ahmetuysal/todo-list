@@ -50,7 +50,7 @@ const TodoList: VFC<TodoListProps> = ({
         ))}
       </StyledOrderedList>
       {hasCompletedItems ? (
-        <StyledRemoveCompletedItemsButton onClick={onRemoveCompletedItems}>
+        <StyledRemoveCompletedItemsButton onClick={onRemoveCompletedItems} type="button">
           Clear Completed
         </StyledRemoveCompletedItemsButton>
       ) : null}

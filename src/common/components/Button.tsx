@@ -8,6 +8,14 @@ const Button = styled.button`
   border: 2px solid #2d70fd;
   border-radius: 3px;
   cursor: pointer;
+  
+  &:focus {
+    background: #5792ff;
+  }
+
+  &:hover {
+    background: #5792ff;
+  }
 `;
 
 export default Button;

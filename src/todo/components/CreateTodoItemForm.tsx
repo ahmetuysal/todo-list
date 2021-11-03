@@ -32,17 +32,18 @@ const CreateTodoItemForm: VFC<TodoListProps> = ({
   const onCreateItemSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (title === '') return;
+    setTitle('');
     onAddTodoItem({ title, completed: false})
   }
 
   return (
-    <CreateItemForm onSubmit={onCreateItemSubmit}>
+    <CreateItemForm onSubmit={onCreateItemSubmit} data-testid="create-todo-item-form">
       <CreateItemInput
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         placeholder="What needs to be done?"
       />
-      <CreateItemButton>
+      <CreateItemButton type="submit">
         Create
       </CreateItemButton>
     </CreateItemForm>

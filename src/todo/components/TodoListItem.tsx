@@ -15,9 +15,15 @@ const TodoListItem: VFC<TodoListItemProps> = ({
 }) => (
     <li
       className={className}
+      tabIndex={0}
       onClick={() => {
-      onToggleTodoItem(item);
-    }}>
+        onToggleTodoItem(item);
+      }}
+      onKeyUp={(e) => {
+        if (e.code === 'Space' || e.code === 'Enter') onToggleTodoItem(item);
+      }}
+      aria-checked={item.completed}
+    >
       {item.title}
     </li>
 );
