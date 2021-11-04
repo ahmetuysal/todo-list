@@ -22,6 +22,7 @@ const TodoListItem: VFC<TodoListItemProps> = ({
       onKeyUp={(e) => {
         if (e.code === 'Space' || e.code === 'Enter') onToggleTodoItem(item);
       }}
+      role="checkbox"
       aria-checked={item.completed}
     >
       {item.title}
